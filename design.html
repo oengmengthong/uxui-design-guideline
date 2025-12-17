@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Project Design Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🚀 Universal Project Design Generator</h1>
+        <p class="subtitle">Mobile + Web • Use this every time you start a new project.</p>
+    </header>
+
+    <!-- 1. Setup -->
+    <div class="section">
+        <h2>1️⃣ Project Design Setup <span class="tag error">Mandatory</span></h2>
+        <p>Before design starts, always define:</p>
+        <br>
+        <div class="grid-2">
+            <div class="card">
+                <strong>Project Type</strong>
+                <p>Admin / Consumer App / Landing / SaaS</p>
+            </div>
+            <div class="card">
+                <strong>Platforms</strong>
+                <p>Android / iOS / Web</p>
+            </div>
+            <div class="card">
+                <strong>Primary Users</strong>
+                <p>Admin / Staff / Customer</p>
+            </div>
+            <div class="card">
+                <strong>Theme Style</strong>
+                <p>Clean / Modern / Corporate / Playful</p>
+            </div>
+            <div class="card" style="grid-column: 1 / -1;">
+                <strong>Primary Action</strong>
+                <p>e.g. Create, Book, Pay, Track</p>
+            </div>
+        </div>
+        <div class="alert alert-warning">
+            👉 No UI work until this is filled.
+        </div>
+    </div>
+
+    <!-- 2. Tokens -->
+    <div class="section">
+        <h2>2️⃣ Design Tokens <span class="tag secondary">Global</span></h2>
+        
+        <div class="grid-2">
+            <div style="grid-column: 1 / -1;">
+                <h3>🎨 Colors</h3>
+                <div class="color-grid">
+                    <div class="color-swatch bg-primary">Primary</div>
+                    <div class="color-swatch bg-secondary">Secondary</div>
+                    <div class="color-swatch bg-background">Background</div>
+                    <div class="color-swatch bg-surface">Surface</div>
+                    <div class="color-swatch bg-text-primary">Text Primary</div>
+                    <div class="color-swatch bg-text-secondary">Text Secondary</div>
+                    <div class="color-swatch bg-success">Success</div>
+                    <div class="color-swatch bg-warning">Warning</div>
+                    <div class="color-swatch bg-error">Error</div>
+                </div>
+                <div class="alert alert-warning" style="font-size: 0.9rem; margin-top: 16px;">
+                    <strong>Rules:</strong> Background = neutral • Primary = actions only • Error/Success = status only
+                </div>
+            </div>
+            
+            <div style="grid-column: 1 / -1;">
+                <h3>🔤 Typography</h3>
+                <div class="card type-preview">
+                    <div class="type-row"><span class="type-label">Display / H1</span> <h1>Heading 1</h1></div>
+                    <div class="type-row"><span class="type-label">H2</span> <h2>Heading 2</h2></div>
+                    <div class="type-row"><span class="type-label">H3</span> <h3>Heading 3</h3></div>
+                    <div class="type-row"><span class="type-label">Body</span> <p>Body text (16px). The quick brown fox jumps over the lazy dog.</p></div>
+                    <div class="type-row" style="border:none;"><span class="type-label">Caption</span> <span class="caption">Caption text (small)</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 24px;">
+            <div>
+                <h3>📐 Spacing System</h3>
+                <p style="margin-bottom: 8px;">Use 8pt system only</p>
+                <div class="card">
+                    <div class="spacing-row"><span class="spacing-label">4px</span> <div class="spacing-box" style="width: 4px;"></div></div>
+                    <div class="spacing-row"><span class="spacing-label">8px</span> <div class="spacing-box" style="width: 8px;"></div></div>
+                    <div class="spacing-row"><span class="spacing-label">12px</span> <div class="spacing-box" style="width: 12px;"></div></div>
+                    <div class="spacing-row"><span class="spacing-label">16px</span> <div class="spacing-box" style="width: 16px;"></div></div>
+                    <div class="spacing-row"><span class="spacing-label">24px</span> <div class="spacing-box" style="width: 24px;"></div></div>
+                    <div class="spacing-row"><span class="spacing-label">32px</span> <div class="spacing-box" style="width: 32px;"></div></div>
+                </div>
+            </div>
+            <div>
+                <h3>🔲 Radius</h3>
+                <p style="margin-bottom: 8px;">Pick 2 sizes max per project.</p>
+                <div class="radius-preview">
+                    <div class="radius-box" style="border-radius: 8px;">Small (8)</div>
+                    <div class="radius-box" style="border-radius: 12px;">Medium (12)</div>
+                    <div class="radius-box" style="border-radius: 16px;">Large (16)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Structure -->
+    <div class="section">
+        <h2>3️⃣ Screen Structure Generator</h2>
+        <p>Every screen must follow this structure:</p>
+        <div class="code-block">
+Safe Area
+└── App Bar / Header
+└── Content Area
+    └── Sections
+        └── Cards / Lists / Forms
+└── Primary Action
+└── Feedback (Loading / Error / Empty)</div>
+        <p style="color: var(--color-error);">❌ No floating random elements.</p>
+    </div>
+
+    <!-- 4. Required Screens -->
+    <div class="section">
+        <h2>4️⃣ Required Screens <span class="tag secondary">Minimum Set</span></h2>
+        <div class="grid-2">
+            <div>
+                <h3>Core</h3>
+                <ul>
+                    <li>Splash / Launch</li>
+                    <li>Login / Auth (if required)</li>
+                    <li>Main List / Dashboard</li>
+                    <li>Detail Screen</li>
+                    <li>Create / Edit Screen</li>
+                </ul>
+            </div>
+            <div>
+                <h3>States</h3>
+                <ul>
+                    <li>Loading (Skeleton)</li>
+                    <li>Empty State</li>
+                    <li>Error State</li>
+                    <li>Success Feedback</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Components -->
+    <div class="section">
+        <h2>5️⃣ Component Generator</h2>
+        <p>Before designing screens, create these components:</p>
+        <div class="grid-2">
+            <div style="grid-column: 1 / -1;">
+                <h3>Buttons</h3>
+                <div class="btn-preview-grid">
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-secondary">Secondary</button>
+                    <button class="btn btn-text">Text Button</button>
+                    <button class="btn btn-danger">Danger</button>
+                    <button class="btn btn-loading">Loading...</button>
+                    <button class="btn btn-disabled" disabled>Disabled</button>
+                </div>
+            </div>
+            
+            <div>
+                <h3>Inputs</h3>
+                <div class="input-preview-grid">
+                    <div class="input-group">
+                        <label class="input-label">Text Input</label>
+                        <input type="text" class="input-field" placeholder="Enter text...">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Dropdown</label>
+                        <select class="input-field">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3>Others</h3>
+                <div class="comp-card">
+                    <h4 style="margin-bottom: 12px;">Card Component</h4>
+                    <div class="comp-list-item">List Item 1 <span>→</span></div>
+                    <div class="comp-list-item">List Item 2 <span>→</span></div>
+                    <div style="margin-top: 12px;">
+                        <button class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 8px;">Action</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-error">
+            <strong>Rule:</strong> No custom component allowed unless approved
+        </div>
+    </div>
+
+    <!-- 6. Platform Rules -->
+    <div class="section">
+        <h2>6️⃣ Platform-Specific Rules</h2>
+        <div class="grid-2">
+            <div>
+                <h3>📱 Mobile (Android & iOS)</h3>
+                <ul>
+                    <li>Touch target ≥ 48dp</li>
+                    <li>Bottom actions within thumb zone</li>
+                    <li>Bottom navigation for 3–5 main sections</li>
+                    <li>Back button ALWAYS works</li>
+                </ul>
+            </div>
+            <div>
+                <h3>🌐 Web</h3>
+                <ul>
+                    <li>Max width: 1200–1280px</li>
+                    <li>Hover + focus states required</li>
+                    <li>Tables for admin only</li>
+                </ul>
+                <br>
+                <strong>Breakpoints:</strong>
+                <ul>
+                    <li>Mobile ≤600</li>
+                    <li>Tablet 601–1024</li>
+                    <li>Desktop ≥1025</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. UX Rules -->
+    <div class="section">
+        <h2>7️⃣ UX Rules <span class="tag error">Non-Negotiable</span></h2>
+        <ul>
+            <li>One primary action per screen</li>
+            <li>Confirm destructive actions only</li>
+            <li>Forms show errors after interaction</li>
+            <li>Never block user without feedback</li>
+            <li>Navigation must be predictable</li>
+        </ul>
+    </div>
+
+    <!-- 8. Checklist -->
+    <div class="section">
+        <h2>8️⃣ Design Review Checklist</h2>
+        <p>Before Dev Starts, Designer must deliver:</p>
+        <br>
+        <div class="checklist-item">✅ Components with variants</div>
+        <div class="checklist-item">✅ Color & typography tokens</div>
+        <div class="checklist-item">✅ Responsive layouts</div>
+        <div class="checklist-item">✅ All states (loading / empty / error)</div>
+        <div class="checklist-item">✅ Figma auto-layout enabled</div>
+        
+        <div class="alert alert-error">
+            If ❌ → design goes back.
+        </div>
+    </div>
+
+    <!-- 9. Naming -->
+    <div class="section">
+        <h2>9️⃣ Naming Convention</h2>
+        <p>Figma & Dev consistency:</p>
+        <div class="code-block">
+Button/Primary
+Input/Text/Default
+Card/Default
+Screen/Login
+Screen/Dashboard</div>
+        <p>Same names = easier Flutter / Web implementation.</p>
+    </div>
+
+    <!-- Workflow -->
+    <div class="section" style="border-color: var(--color-primary);">
+        <h2>🔥 Recommended Workflow</h2>
+        <div class="workflow-step"><span class="workflow-number">1</span> Define tokens</div>
+        <div class="workflow-step"><span class="workflow-number">2</span> Build components</div>
+        <div class="workflow-step"><span class="workflow-number">3</span> Design main screens</div>
+        <div class="workflow-step"><span class="workflow-number">4</span> Design states</div>
+        <div class="workflow-step"><span class="workflow-number">5</span> Responsive pass</div>
+        <div class="workflow-step"><span class="workflow-number">6</span> Dev handoff</div>
+    </div>
+
+</div>
+
+</body>
+</html>
